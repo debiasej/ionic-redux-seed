@@ -7,9 +7,10 @@
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
+    "lint": "ionic-app-scripts lint && npm run todo",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "todo": "leasot 'src/**/*.ts' 'src/**/*.scss' || true"
   },
   "dependencies": {
     "@angular/common": "4.4.4",
@@ -35,8 +36,12 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
+    "@angular/cli": "^1.4.9",
     "@ionic/app-scripts": "3.0.1",
+    "codelyzer": "^3.2.2",
+    "leasot": "^4.10.2",
     "ngrx-store-freeze": "^0.2.0",
+    "tslint": "^5.8.0",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project"
