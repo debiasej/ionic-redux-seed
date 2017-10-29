@@ -5,12 +5,23 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
+    "start": "npm run ionic:serve",
+    "precommit": "lint-staged && npm run lint",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint && npm run todo",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "todo": "leasot 'src/**/*.ts' 'src/**/*.scss' || true"
+  },
+  "lint-staged": {
+    "concurrent": false,
+    "linters": {
+      "*.ts": [
+        "prettier --write --no-semi --single-quote",
+        "git add"
+      ]
+    }
   },
   "dependencies": {
     "@angular/common": "4.4.4",
@@ -39,8 +50,11 @@
     "@angular/cli": "^1.4.9",
     "@ionic/app-scripts": "3.0.1",
     "codelyzer": "^3.2.2",
+    "husky": "^0.14.3",
     "leasot": "^4.10.2",
+    "lint-staged": "^4.3.0",
     "ngrx-store-freeze": "^0.2.0",
+    "prettier": "^1.7.4",
     "tslint": "^5.8.0",
     "typescript": "2.3.4"
   },
