@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -10,6 +11,10 @@
     ],
     "module": "es2015",
     "moduleResolution": "node",
+    "paths": {
+      "@app-redux/*": ["app/app-redux/*"],
+      "@environments/*": ["environments/*"]
+    },
     "sourceMap": true,
     "target": "es5"
   },

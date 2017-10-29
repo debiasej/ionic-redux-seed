@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar [ngClass]="theme$ | async">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button *ngIf="( theme$ | async ) != 'default-theme'" ion-button block (click)="changeTheme('default-theme')" >Apply Default Theme</button>
+  <button *ngIf="( theme$ | async ) == 'default-theme'" ion-button block color="secondary" (click)="changeTheme('ion-book-theme')">Apply Ion-book Theme</button>
+</ion-content>
