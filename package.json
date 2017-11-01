@@ -54,6 +54,7 @@
     "ngrx-store-freeze": "^0.2.0",
     "prettier": "^1.7.4",
     "tslint": "^5.8.0",
+    "tslint-ionic-rules": "0.0.11",
     "typescript": "2.3.4"
   },
   "config": {
